@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad · Poketubi Clips Uploader</title>
+<style>
+  :root{
+    --bg:#faf9f7; --surface:#ffffff; --border:#e7e2dc;
+    --text:#1c1a1f; --text-dim:#5b5761;
+    --accent:#c81e4d; --accent-dim:#f4d9e1; --gold:#c8871e; --code-bg:#f1eee9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#151316; --surface:#1d1a1f; --border:#332e35;
+      --text:#f1eee9; --text-dim:#a89fae;
+      --accent:#f0678e; --accent-dim:#3a2029; --gold:#e0a94b; --code-bg:#242026;
+    }
+  }
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text); margin:0;
+    font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  }
+  h1,h2,h3{font-family:'Sora','Source Sans 3',system-ui,sans-serif; text-wrap:balance;}
+  a{color:var(--accent);}
+  header{
+    background:var(--bg); border-bottom:1px solid var(--border);
+    padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
+    gap:12px; flex-wrap:wrap;
+  }
+  header .brand{font-family:'Sora',sans-serif; font-weight:700; font-size:15px;}
+  header .brand span{color:var(--accent);}
+  nav{display:flex; gap:16px;}
+  nav a{font-size:13px; font-weight:600; text-decoration:none; color:var(--text-dim); padding:6px 10px; border-radius:6px;}
+  main{max-width:720px; margin:0 auto; padding:32px 20px 80px;}
+  .doc-head{padding-bottom:24px; margin-bottom:32px; border-bottom:1px solid var(--border);}
+  .doc-head h1{font-size:28px; margin:0 0 8px;}
+  .doc-head .meta{font-size:13px; color:var(--text-dim); display:flex; gap:8px; flex-wrap:wrap;}
+  .doc-head .meta code{background:var(--code-bg); padding:2px 6px; border-radius:4px; font-size:12px;}
+  h3{font-size:15px; margin:24px 0 8px;}
+  p{line-height:1.65; max-width:65ch; margin:0 0 14px; font-size:15px;}
+  ul{margin:0 0 14px; padding-left:20px;}
+  li{line-height:1.6; margin-bottom:6px; font-size:15px;}
+  .callout{
+    background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 16px; font-size:14px; color:var(--text-dim); margin:0 0 24px;
+  }
+  .callout b{color:var(--text);}
+  .contact{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px; font-size:14px;}
+  footer{max-width:720px; margin:0 auto; padding:0 20px 40px; color:var(--text-dim); font-size:12px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">POKE<span>TUBI</span> · Clips Uploader</div>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/terms.html">Términos</a>
+  </nav>
+</header>
+
+<main>
+  <div class="doc-head">
+    <h1>Política de Privacidad</h1>
+    <div class="meta">
+      <span>App: <code>Poketubi Clips Uploader</code></span>
+      <span>Vigente desde <code>19 sep 2026</code></span>
+    </div>
+  </div>
+
+  <div class="callout">
+    <b>Sobre esta app.</b> Poketubi Clips Uploader es una herramienta interna usada por el equipo de
+    Poketubi para publicar clips destacados de nuestras transmisiones de Pokémon competitivo (Twitch)
+    directamente en la cuenta oficial de TikTok <b>@poketubi</b>, mediante la API oficial de TikTok
+    (Login Kit + Content Posting API).
+  </div>
+
+  <h3>1. Datos que maneja la app</h3>
+  <p>Al conectar la cuenta de TikTok de Poketubi mediante Login Kit, la app recibe únicamente:</p>
+  <ul>
+    <li>Un token de acceso (access token) y token de actualización (refresh token) de OAuth, asociados a la cuenta <b>@poketubi</b>.</li>
+    <li>Datos básicos públicos de esa cuenta (nombre de usuario, ID de cuenta) necesarios para confirmar la conexión correcta.</li>
+  </ul>
+  <p>
+    La app no recolecta datos de espectadores, seguidores ni de ninguna persona que no sea el
+    staff que opera la cuenta de Poketubi.
+  </p>
+
+  <h3>2. Para qué se usan</h3>
+  <p>
+    Los tokens se usan exclusivamente para publicar videos (clips) en la cuenta de TikTok de
+    Poketubi a través de la Content Posting API oficial de TikTok. No se usan para leer mensajes
+    privados, seguidores, ni ninguna otra información de la cuenta.
+  </p>
+
+  <h3>3. Almacenamiento y seguridad</h3>
+  <p>
+    Los tokens se guardan de forma privada (variables de entorno / almacenamiento cifrado local),
+    nunca en repositorios públicos ni se comparten con terceros.
+  </p>
+
+  <h3>4. Revocar el acceso</h3>
+  <p>
+    El equipo de Poketubi puede desconectar la app en cualquier momento desde la configuración de
+    aplicaciones conectadas de TikTok, lo que invalida los tokens de inmediato.
+  </p>
+
+  <h3>5. Terceros</h3>
+  <p>
+    No vendemos, alquilamos ni compartimos datos con terceros. La única integración es con la API
+    oficial de TikTok for Developers.
+  </p>
+
+  <div class="contact">
+    <b>Contacto.</b> Para consultas sobre esta política de privacidad, escribir a
+    <a href="mailto:carlosacp526@gmail.com">carlosacp526@gmail.com</a>.
+  </div>
+</main>
+
+<footer>
+  Poketubi Clips Uploader — documento para el registro de la app en TikTok for Developers.
+</footer>
+</body>
+</html>
