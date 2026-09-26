@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Términos de Servicio · Poketubi Clips Uploader</title>
+<title>Poketubi Clips Uploader</title>
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
@@ -31,7 +31,8 @@
     padding:14px 20px; display:flex; align-items:center; justify-content:space-between;
     gap:12px; flex-wrap:wrap;
   }
-  header .brand{font-family:'Sora',sans-serif; font-weight:700; font-size:15px;}
+  header .brand{font-family:'Sora',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; gap:8px;}
+  header .brand img{width:22px; height:22px; border-radius:5px;}
   header .brand span{color:var(--accent);}
   nav{display:flex; gap:16px;}
   nav a{font-size:13px; font-weight:600; text-decoration:none; color:var(--text-dim); padding:6px 10px; border-radius:6px;}
@@ -50,25 +51,30 @@
   }
   .callout b{color:var(--text);}
   .contact{background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:18px 20px; font-size:14px;}
+  .links{display:flex; gap:12px; margin:20px 0 0;}
+  .links a{
+    font-size:13px; font-weight:600; text-decoration:none; color:var(--text);
+    background:var(--surface); border:1px solid var(--border); padding:8px 14px; border-radius:8px;
+  }
   footer{max-width:720px; margin:0 auto; padding:0 20px 40px; color:var(--text-dim); font-size:12px;}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="brand">POKE<span>TUBI</span> · Clips Uploader</div>
+  <div class="brand"><img src="/favicon.png" alt=""> POKE<span>TUBI</span> · Clips Uploader</div>
   <nav>
-    <a href="/">Inicio</a>
     <a href="/privacy.html">Privacidad</a>
+    <a href="/terms.html">Términos</a>
   </nav>
 </header>
 
 <main>
   <div class="doc-head">
-    <h1>Términos de Servicio</h1>
+    <h1>Poketubi Clips Uploader</h1>
     <div class="meta">
       <span>App: <code>Poketubi Clips Uploader</code></span>
-      <span>Vigente desde <code>19 sep 2026</code></span>
+      <span>Cuenta: <code>@poketubi</code></span>
     </div>
   </div>
 
@@ -80,49 +86,42 @@
     usuarios externos.
   </div>
 
-  <h3>1. Quiénes somos</h3>
+  <h3>Quiénes somos</h3>
   <p>
     Poketubi es una comunidad de Pokémon competitivo en español, organizadora de la Pokémon Senior
-    Series (PSS) y otros torneos, con transmisiones regulares en Twitch. En este documento,
-    "Poketubi", "nosotros" o "el equipo" se refiere al staff que administra la cuenta y las
-    transmisiones de Poketubi.
+    Series (PSS) y otros torneos, con transmisiones regulares en Twitch. El staff de Poketubi
+    revisa nuestras transmisiones, elige los mejores momentos (KOs, jugadas destacadas, apariciones
+    de jugadores reconocidos) y usa esta herramienta para publicarlos como clips cortos.
   </p>
 
-  <h3>2. Qué hace la app</h3>
+  <h3>Qué hace la app</h3>
   <p>
     La app conecta, vía OAuth, la cuenta de TikTok <b>@poketubi</b> con nuestro flujo interno de
-    edición para publicar automáticamente clips cortos extraídos de nuestras transmisiones,
-    junto con un título y hashtags escritos por el equipo. La app no accede a ninguna cuenta de
-    TikTok que no sea la de Poketubi, ni publica en nombre de terceros.
+    edición, y usa la Content Posting API para publicar automáticamente los clips seleccionados,
+    junto con un título y hashtags escritos por el equipo. No accede a ninguna cuenta de TikTok que
+    no sea la de Poketubi.
   </p>
 
-  <h3>3. Uso permitido</h3>
+  <h3>Flujo end-to-end</h3>
   <ul>
-    <li>La app es de uso exclusivo del equipo de Poketubi.</li>
-    <li>El contenido publicado corresponde a extractos de transmisiones propias de Poketubi.</li>
-    <li>No se usa para automatizar spam, contenido engañoso ni interacción artificial (bots, views falsas, etc.).</li>
+    <li>El staff de Poketubi recorta clips desde nuestras transmisiones de Twitch.</li>
+    <li>Un miembro autorizado del equipo inicia sesión con Login Kit usando la cuenta <code>@poketubi</code>.</li>
+    <li>La app publica el clip en TikTok mediante la Content Posting API (Direct Post).</li>
   </ul>
 
-  <h3>4. Propiedad del contenido</h3>
-  <p>
-    Poketubi es titular o cuenta con los derechos necesarios sobre el material transmitido
-    (partidas, comentario en vivo, gráficos de marca) que se recorta y publica mediante esta app.
-  </p>
+  <div class="links">
+    <a href="/privacy.html">Política de Privacidad →</a>
+    <a href="/terms.html">Términos de Servicio →</a>
+  </div>
 
-  <h3>5. Cambios a estos términos</h3>
-  <p>
-    Podemos actualizar estos términos cuando cambie el funcionamiento de la app. La fecha de
-    "vigente desde" en la parte superior refleja la última actualización.
-  </p>
-
-  <div class="contact">
-    <b>Contacto.</b> Para consultas sobre estos términos, escribir a
+  <div class="contact" style="margin-top:32px;">
+    <b>Contacto.</b> Para consultas sobre esta app, escribir a
     <a href="mailto:carlosacp526@gmail.com">carlosacp526@gmail.com</a>.
   </div>
 </main>
 
 <footer>
-  Poketubi Clips Uploader — documento para el registro de la app en TikTok for Developers.
+  Poketubi Clips Uploader — sitio de registro de la app en TikTok for Developers.
 </footer>
 </body>
 </html>
